@@ -7,14 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "child_process": "^1.0.2",
-    "exec-sh": "^0.4.0",
-    "inquirer": "^9.2.10"
+    "exec-sh": "^0.4.0"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.3",
     "typescript": "^5.1.6"
   },
   "bin": {
-    "git-git-cz": "dist/cli.js"
+    "git-cz": "dist/cli.js"
   }
 }
