@@ -13,5 +13,8 @@
   "devDependencies": {
     "@types/inquirer": "^9.0.3",
     "typescript": "^5.1.6"
+  },
+  "bin": {
+    "git-git-cz": "dist/cli.js"
   }
 }
