@@ -23,15 +23,28 @@ import { Select, prompt as Inputs } from 'enquirer';
     .catch(console.error);
 
   async function runMessage() {
-    const messagePrompt = await Inputs({
+    Inputs({
       type: 'input',
       name: 'commitMessage',
       message: 'Enter the commit message:',
+    }).then((pro: any) => {
+      message = pro
+      runCon()
+    })
+  }
+
+  async function runCon() {
+    Inputs({
+      type: 'confirm',
+      name: 'Commit?',
+      message: 'commit the message?'
+    }).then(answer => {
+      if (answer) {
+        runGit()
+      } else {
+        process.exit(0)
+      }
     });
-
-    message = messagePrompt;
-
-    runGit()
   }
 
   function runGit() {
