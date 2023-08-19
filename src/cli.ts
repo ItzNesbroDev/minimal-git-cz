@@ -28,7 +28,7 @@ import { Select, prompt as Inputs } from 'enquirer';
       name: 'commitMessage',
       message: 'Enter the commit message:',
     }).then((pro: any) => {
-      message = pro
+      message = pro.commitMessage
       runCon()
     })
   }
