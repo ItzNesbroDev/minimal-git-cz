@@ -6,7 +6,7 @@ import { Select, prompt as Inputs } from 'enquirer';
 (async () => {
   const choices = ['feat', 'fix', 'refactor', 'docs', 'style', 'test', 'build', 'ci'];
   let selected: any;
-  let message;
+  let message: any;
 
   const prompt = new Select({
     name: 'type',
@@ -31,6 +31,10 @@ import { Select, prompt as Inputs } from 'enquirer';
 
     message = messagePrompt;
 
+    runGit()
+  }
+
+  function runGit() {
     const commitMessage = `${selected}: ${message}`;
 
     execSh(`git commit -m "${commitMessage}"`, {}, (err) => {
