@@ -4,6 +4,10 @@
 
 Welcome to Minimal Git Commit, your ultimate companion for crafting meaningful and stylish Git commits. Say goodbye to bland commit messages and hello to a world of expressive version control.
 
+## NOTE:
+
+There is some errors in enquirer types so dont mind that if your building this ts code
+
 ## Effortless Installation
 
 Get started in seconds with our hassle-free installation process:
